@@ -5,11 +5,11 @@
 				<box size = "1 0.4 0.2"/>
 			</geometry>
 			<origin xyz="0.5 0.2 0.1" rpy="0 0 0"/>
-			<material name="blue">
-				<color rgba="0 0 0.8 1"/>
+			<material name="yellow">
+				<color rgba="0.8 0.8 0 1"/>
 			</material>
 		</visual>
-	</link>
+	</link>s
 
 	<link name="wheel_1">
 		<visual>
@@ -73,10 +73,12 @@
 	</link>
 
 	<link name="gripper">
-		<geometry>
-			<box size = "0.4 0.2 0.2"/>
-		</geometry>
-		<origin xyz="0 0 0.1" rpy="0 0 0"/>
+		<visual>
+			<geometry>
+				<box size = "0.1 0.1 0.1"/>
+			</geometry>
+			<origin xyz="0.1 0 0" rpy="0 0 0"/>
+		</visual>
 	</link>
 
 
@@ -124,11 +126,6 @@
 		<axis xyz=" 0 0 1"/>
 	</joint>
 
-	<joint name="gripper_joint" type="continuous">
-		<parent link="box"/>
-		<child link="gripper"/>
-		<origin xyz="0.8 0.2 0.2" rpy="0 0 0"/>
-	</joint>
-
+	
 </robot>
 <!-- 1 0.4 0.2 -->
