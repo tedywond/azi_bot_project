@@ -16,7 +16,7 @@
 			<geometry>
 				<cylinder length="0.05" radius="0.1"/>
 			</geometry>
-			<origin xyz="0.025 0 0.096" rpy="1.57 0 0"/>
+			<origin xyz="0 0 0" rpy="1.57 0 0"/>
 			<material name="black">
 				<color rgba="0 0 0 1"/>
 			</material>
@@ -29,7 +29,7 @@
 			<geometry>
 				<cylinder length="0.05" radius="0.1"/>
 			</geometry>
-			<origin xyz="0.025 0 0.096" rpy="1.57 0 0"/>
+			<origin xyz="0 0 0" rpy="1.57 0 0"/>
 			<material name="black"/>
 		</visual>
 	</link>
@@ -39,7 +39,7 @@
 			<geometry>
 				<cylinder length="0.05" radius="0.1"/>
 			</geometry>
-			<origin xyz="0.025 0 0.096" rpy="1.57 0 0"/>
+			<origin xyz="0 0 0" rpy="1.57 0 0"/>
 			<material name="black"/>		
 		</visual>
 	</link>
@@ -49,7 +49,7 @@
 			<geometry>
 				<cylinder length="0.05" radius="0.1"/>
 			</geometry>
-			<origin xyz="0.025 0 0.096" rpy="1.57 0 0"/>
+			<origin xyz="0 0 0" rpy="1.57 0 0"/>
 			<material name="black"/>	
 		</visual>
 	</link>
@@ -88,28 +88,28 @@
 	<joint name="wh1_joint" type="continuous">
 		<parent link="box"/>
 		<child link="wheel_1"/>
-		<origin xyz="0.2 0 -0.1" rpy="0 6.28 0"/>
+		<origin xyz="0.2 -0.05 0" rpy="0 6.28 0"/>
 		<axis xyz=" 0 1 0"/>
 	</joint>
 
 	<joint name="wh2_joint" type="continuous">
 		<parent link="box"/>
 		<child link="wheel_2"/>
-		<origin xyz="0.8 0 -0.1" rpy="0 6.28 0"/>
+		<origin xyz="0.8 -0.05 0" rpy="0 6.28 0"/>
 		<axis xyz=" 0 1 0"/>
 	</joint>
 
 	<joint name="wh3_joint" type="continuous">
 		<parent link="box"/>
 		<child link="wheel_3"/>
-		<origin xyz="0.2 0.4 -0.1" rpy="0 6.28 0"/>
-		<axis xyz=" 0 1 0"/>
+		<origin xyz="0.2 0.45 0" rpy="0 6.28 0"/>
+		<axis xyz=" 0 1 0" rpy="0 0 0"/>
 	</joint>
 
 	<joint name="wh4_joint" type="continuous">
 		<parent link="box"/>
 		<child link="wheel_4"/>
-		<origin xyz="0.8 0.4 -0.1" rpy="0 6.28 0"/>
+		<origin xyz="0.8 0.45 0" rpy="0 6.28 0"/>
 		<axis xyz=" 0 1 0"/>
 	</joint>
 
@@ -120,11 +120,12 @@
 		<axis xyz=" 0 0 0"/>
 	</joint>
 
-	<joint name="camera_joint" type="continuous">
+	<joint name="camera_joint" type="revolute">
 		<parent link="neck"/>
 		<child link="camera"/>
 		<origin xyz="0 0 0.2" rpy="0 0 4.71"/>
 		<axis xyz=" 0 0 1"/>
+		<limit effort="1000.0" lower="-2.36" upper="2.36" velocity="0.5"/>
 	</joint>
 
 	<joint name="gripper_joint" type="continuous">
@@ -134,4 +135,3 @@
 	</joint>
 
 </robot>
-<!-- 1 0.4 0.2 -->
