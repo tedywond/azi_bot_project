@@ -6,6 +6,7 @@
 The **mobile robot** we will be using for this project will have the structure sketched in the picture
 
 The major components of the robot are 
+
 1. Four wheels  
 2. Gripper  
 3. Depth camera with 270 degrees of rotation 
