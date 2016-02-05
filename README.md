@@ -5,7 +5,11 @@
 
 The **mobile robot** we will be using for this project will have the structure sketched in the picture
 
-The major components of the robot are..* Four wheels..* Gripper..* Depth camera with270 degrees of rotation..* Sonar sensors
+The major components of the robot are 
+1. Four wheels  
+2. Gripper  
+3. Depth camera with 270 degrees of rotation 
+4. Sonar sensors
 
 The robot will be equipped with four wheels from which 2 are powered and the other 2 are free rotating wheels which will be helpful for the stability by making the center of gravity inside the rectangle of the robot surface. Steering will be handled by **differential steering** method by altering the speed of the wheels to change direction as follows.
 
