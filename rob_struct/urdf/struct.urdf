@@ -66,9 +66,10 @@
 	<link name="camera">
 		<visual>
 			<geometry>
-				<box size = "0.4 0.2 0.2"/>
+				<!-- <box size = "0.4 0.2 0.2"/> -->
+				<mesh filename="package://rob_struct/meshes/kinect.dae" scale="0.001 0.001 0.001" />
 			</geometry>
-			<origin xyz="0 0 0.1" rpy="0 0 0"/>
+			<origin xyz="0.025 0.025 0.05" rpy="0 0 0"/>
 		</visual>
 	</link>
 
